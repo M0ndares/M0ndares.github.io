@@ -175,28 +175,34 @@ body {
     font-style: italic;
     font-size:22px;
     color: aliceblue;
+    top:120px;
 }
 #SecondHL{
-    bottom:85px;
-    position:relative;
-    left:750px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    left: 700px;
+    text-decoration:overline underline;
+    font-size:22px;
+    color: aliceblue;
+    bottom:38px;
 }
 #secondHL{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
-    left: 950px;
+    left: 900px;
     font-style: italic;
     font-size:22px;
     color: aliceblue;
-    bottom:85px
+    bottom:10px;
 }
-.HLclass {
+#FirstHL {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     position: relative;
     left: 60px;
     text-decoration:overline underline;
     font-size:22px;
     color: aliceblue;
+    top:50px;
 }
 #HLImage{
     position:relative;
@@ -204,4 +210,45 @@ body {
     top: 55px;
     width: 900px;
     height: 65px;
+}
+#imagesTitle{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    font-size: 40px;
+    color:aliceblue;
+    border-width: 10px;
+    border-left: 20px;
+    border-right: 20px;
+    border-style:inset;
+    position: absolute;
+    left: 70px;   
+}
+#imagesImage{
+    position:relative;
+    left: 150px;
+    top: 125px;
+    width: 990px;
+    height: 65px;
+}
+#imagesFunction{
+    text-decoration: underline;
+    font-family:'Segoe UI', 'Tahoma', 'Times New Roman', serif;
+    position: relative;
+    left: 398px;
+    font-style: italic;
+    font-size:22px;
+    color: aliceblue;
+}
+#imagesExtraFunction{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    left: 60px;
+    font-style: italic;
+    font-size:22px;
+    color: aliceblue;
+}
+#imagesExample{
+    position: relative;
+    left: 900px;
+    height: 350px;
+    bottom:330px;
 }
