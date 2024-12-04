@@ -1,4 +1,5 @@
 body {
+    margin: auto;
     background-color: black
 }
 #header {
@@ -251,4 +252,70 @@ body {
     left: 900px;
     height: 350px;
     bottom:330px;
+}
+#audioImage{
+    position:relative;
+    left: 50px;
+    bottom:285px;
+    width: 990px;
+    height: 65px;
+}
+#audioFunction{
+    text-decoration: underline;
+    font-family:'Segoe UI', 'Tahoma', 'Times New Roman', serif;
+    position: relative;
+    left: 230px;
+    bottom: 400px;
+    font-style: italic;
+    font-size:22px;
+    color: aliceblue;
+}
+#audioTitle{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+    font-size: 40px;
+    color:aliceblue;
+    border-width: 10px;
+    border-left: 20px;
+    border-right: 20px;
+    border-style:inset;
+    position: absolute;
+    left: 1070px;   
+    top:2750px;
+}
+#audioExtraFunction{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    left: 60px;
+    bottom: 360px;
+    font-style: italic;
+    font-size:22px;
+    color: aliceblue;
+}
+#audioExample1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    color: aliceblue;
+    left: 95px;
+    bottom:380px;
+}
+#audioExample2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    color: aliceblue;
+    left: 380px;
+    bottom:417px;
+}
+#audioExample3{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    color: aliceblue;
+    left: 690px;
+    bottom:457px;
+}
+#audioExample4{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    position: relative;
+    color: aliceblue;
+    left: 1010px;
+    bottom:490px;
 }
