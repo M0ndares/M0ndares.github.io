@@ -4,6 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <!--These are META TAGS, they're invisible for the users, but crucial for browers-->
+    <!-- These are used on the head section, they are meant to give essential information about the webpage-->
+    <meta name="Description" content="First HTML practice, Autumn 2024">
+    <meta name="Author" content="Osval Elías Montesinos Valladares">
+    <!-- Adapt the webpage view to the scale of each device by using-->
+    <meta name="Viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Add character encoding proprieties-->
+    <meta charset="UTF-8">
+    <!-- Refreshes the webpage every 30 seconds-->
+    <meta http-equiv="Refresh" content="30">
+    <hr>
+
     <title>Everything about html</title>
     <h1 id="header">Html basics: By Osval Montesinos</h1>
 </head>
@@ -139,7 +151,7 @@
     </dl>
     <h4 id="chartsTitle" class="charts">*CHARTS*</h4> <img id='chartsImage' src="audiovisualContent/chartsImage.jpg">
     <br><br><br><br><br><br><br><br>
-    <h2 id="chartsFunction">Introduce a table by using "table ... /table"</h2>
+    <h2 id="chartsFunction">Introduce a chart by using "table ... /table"</h2>
     <h2 id="chartsExtraFunction" class="charts"> {Other functions}:</h2>
     <ul id="chartsExtraFunction">
         <li><h3>Every row has to be between "tr ... /tr"</h3></li>
@@ -163,5 +175,141 @@
             <td>4,000</td>
         </tr>
     </table>
+    <h4 id="colorTitle">*COLOR*</h4> <img id='colorImage' src="audiovisualContent/colorImage.jpg">
+    <br><br><br><br><br><br><br><br>
+    <h2 id="colorFunction" >When color is required in some specific text, using "style" and the trait "color" may be helpful</h2>
+    <dl id="colorExample1">
+        <h2>-{There are 3 ways of assigning color}:</h2>
+        <dt>-By using a color's name</dt>
+        <dd style="color: blueviolet;">style="color: blueviolet;"  VIOLET TEXT </dd>
+        <br>
+        <dt>-By using a RGB value</dt>
+        <dd style="color:rgb(240, 233, 36);">style="color:rgb(240, 233, 36);"  YELLOW TEXT</dd>
+        <br>
+        <dt>-By using a hexadecimal value</dt>
+        <dd style="color: #0eb8e3;"> style="color: #0eb8e3;"  CYAN TEXT</dd>
+    </dl>
+    <h4 id="spanydivTitle">*SPAN/DIV*</h4> <img id='spanydivImage' src="audiovisualContent/spanydivImage.jpg">
+    <br><br><br><br><br><br><br><br>
+    <dl id="spanydivFunction">
+        <h2>SPAN</h2>
+        <dt>Opens the possibility of applying style modifications to just a portion of a text:</dt>
+        <dd>Lorem ipsum "span" <span style="color:red"> sit amet consectetur adipisicing elit. Maxime autem sequi tempore. Et fugit minima voluptate commodi corporis </span> "/span"  autem consectetur, nihil deserunt sunt quasi deleniti beatae praesentium, quidem, in quas!</dd>
+        <br>
+        <h2>DIV</h2>
+        <dt>Defines the division of a document</dt>
+        <dd> <div style="background-color: white; color: black;">
+            <p> "div" Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste beatae facilis tempore aut quo eveniet, illo rerum id sint voluptatem nemo reprehenderit. Adipisci aliquid quia non culpa eos voluptatem quidem.</p>
+       
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio illum impedit eveniet neque, soluta id voluptas quam blanditiis eos eaque reprehenderit dolorum voluptatem omnis repellat tempore dolor ea molestias labore! "/div"</p>
+           </div></dd>
+    </dl>
+    <h4 id="iframesTitle">*IFRAMES*</h4> <img id='iframesImage' src="audiovisualContent/iframesImage.jpg">
+    <br><br><br><br><br><br><br><br>
+    <h2 id="iframesFunction" >These are meant to incrust other webpages or ads into our website, most webpages dont allow the use of iframes, because of security reasons</h2>
+    <iframe style="position: absolute; left: 75px;"class="iframe" src="https://sistemas.ucol.mx/cei/" width="500" height="300"></iframe>
+    <iframe style="position: absolute; left: 590px;" class="iframe" style="border: 0;" src="ad.html" width="700"  height="300"></iframe>
+    <h4 id="buttonsTitle">*BUTTONS*</h4> <img id='buttonsImage' src="audiovisualContent/buttonsImage.jpg">
+    <br><br><br><br><br><br><br><br>
+    <h2 id="buttonsFunction" >Inserting a button is possible by using "a href='url' button 'button name' /button /a" </h2>
+    <dl id="buttonsDescription">
+        <h2>Some examples:</h2>
+        <dt>Button with a url</dt>
+        <dd><a href="https://www.youtube.com/watch?v=HD13eq_Pmp8" target=_blank>
+            <button style="background-color:blue
+            ; color:aliceblue; border-radius: 5px;"> 
+                 Youtube Video 
+            </button>
+        </a></dd>
+        <br>
+        <dt>Button with a track</dt>
+        <dd><a href="ad.html" target=_blank>
+            <button style="background-color:red; color:aliceblue; border-radius: 5px;"> 
+                 December image
+            </button>
+        </a></dd>
+        <br>
+        <dt>Button with coding</dt>
+        <dd><button style="background-color:green; color:aliceblue; border-radius: 5px;" onclick="code()">
+            Hello Button<p id="test"></p>
+            <script>
+                 function code() {
+                    document.getElementById('test').innerHTML = 'Hello';
+                 }
+            </script>
+         </button></dd>
+    </dl>
+    <h4 id="formsTitle">*FORMS*</h4> <img id='formsImage' src="audiovisualContent/formsImage.jpg">
+    <br><br><br><br><br><br><br><br>
+    <h2 id="formsFunction" >There are multiple options to insert forms functionalities, these are between "form ... /form" and every forms section got two parts "label ... /label" for the title and "input" for the question itself</h2>
+    <dl id="formsDescription">
+        <div style="color:aliceblue;">
+        <h2>DONATION FORMS</h2>
+        <dt>-Text Option (type="text")</dt>
+        <dd> <label for="first name">First Name</label>
+            <input type="text" id="first name" placeholder="Your First Name" required>
+            <br>
+            <br>
+            <label for="last name">Last Name</label>
+        <input type="text" id="last name" placeholder="Your Last Name" required>
+        <br>
+        <br>
+        <br></dd>
+        <dt>Password (type="password")</dt>
+        <dd> <label for="password">Password</label>
+        <input type="password" id="password" placeholder="Your Password" required>
+        <br>
+        <br></dd>
+        <dt>Email (type="email")</dt>
+        <dd><label for="email">Email</label>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <br>
+            <br></dd>
+        <br>
+        <dt>Phone (type="tel")</dt>
+        <dd> <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            <br>
+            <br></dd>
+        <dt>Birthdate (type="date")</dt>
+        <dd> <label for="birthdate">Birthdate</label>
+            <input type="date" id="birthdate" placeholder="Your Birthdate Number" required>
+            <br>
+            <br></dd>
+        <dt>Quantity (type="number")</dt>
+        <dd><label for="quantity">Quantity</label>
+            <input style="width: 150px;" type="number" id="quantity" placeholder="Donation Quantity" min="0" max="99999999"required>
+            <br>
+            <br></dd>
+        <dt>Gender (type="radio")</dt>
+        <dd> <label for="Gender">Gender:</label>
+            <label for="Male">Male</label>
+            <input type="radio" name="Gender" id="Male" value="Male">
+            <label for="Female">Female</label>
+            <input type="radio" name="Gender" id="Female" value="Female">
+            <br>
+            <br></dd>
+        <dt>Payment method (type="select")</dt>
+        <dd><label for="selection">Payment Method</label>
+            <select id="selection" name="payment">
+                <option value="Cash">Cash</option>
+                <option value="Credit Card">Credit Card</option>
+                <option value="Debit Card">Debit Card</option>
+            </select>
+            <br>
+            <br></dd>
+        <dt>Checkbox (type="checkbox")</dt>
+        <dd> <label for="check">I'm not a robot</label>
+            <input type="checkbox" id="check">
+            <br>
+            <br></dd>
+        <div>
+        <dt>Submit (type="submit")</dt>
+        <dd><button style="width:600px;" type="submit">Submit</button></dd>
+        <dt>Reset (type="reset")</dt>
+        <dd><button style="width:600px;" type="reset">Reset</button></dd>
+    </div>
+    </dl>
+    </div>
 </body>
 </html>
