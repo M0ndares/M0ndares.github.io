@@ -1,0 +1,69 @@
+/*index.html style*/
+#author {
+    position: absolute;
+    left: 520px;
+    top: 5px;
+    color:aliceblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#mainLogo {
+    position: absolute;
+    left: 420px;
+    top: 75px;
+    width: 400px;
+}
+#title {
+    position: absolute;
+    left: 530px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    top: 350px;
+    font-size: 20px;
+    color: aliceblue;
+    border-style: double;
+}
+#startButton {
+    position: absolute;
+    left: 570px;
+    top: 420px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    color:#2c215c;
+    border-radius: 10px;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-style: dotted; 
+    font-size: 25px;
+}
+/*gameRules.html style*/
+#rulesTitle {
+    font-size: 50px;
+    color: aliceblue;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    left: 535px;
+
+}
+#rules {
+    color: aliceblue;
+    border-style:dashed;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    position: absolute;
+    left: 420px;
+    right: 420px;
+    top: 85px;
+    font-size: 20px;
+}
+#rulesButton {
+    position: absolute;
+    left: 535px;
+    top: 480px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: aliceblue;
+    color:#2c215c;
+    border-radius: 10px;
+    border-color: aliceblue;
+    border-width: 10px;
+    border-style: dotted; 
+    font-size: 40px;
+}
+/*inGame.html style*/
