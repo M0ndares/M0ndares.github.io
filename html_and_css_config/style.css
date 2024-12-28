@@ -1,29 +1,30 @@
 /*index.html style*/
 #author {
-    position: absolute;
-    left: 520px;
+    text-align: center;
     top: 5px;
     color:aliceblue;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+.containerStart {
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+    height: auto;
+}
 #mainLogo {
-    position: absolute;
-    left: 420px;
-    top: 75px;
+    top: 15px;
     width: 400px;
 }
 #title {
-    position: absolute;
-    left: 530px;
+    text-align: center;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     top: 350px;
     font-size: 20px;
+    font-style: oblique;
     color: aliceblue;
-    border-style: double;
 }
 #startButton {
-    position: absolute;
-    left: 570px;
+    width: 200px;
     top: 420px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: aliceblue;
@@ -39,23 +40,27 @@
     font-size: 50px;
     color: aliceblue;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
-    left: 535px;
+    text-align: center;
 
+}
+.containerRules {
+    max-width: 600px; 
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+    height: auto;
 }
 #rules {
     color: aliceblue;
     border-style:dashed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    position: absolute;
-    left: 420px;
-    right: 420px;
+    text-align: center;
     top: 85px;
     font-size: 20px;
 }
 #rulesButton {
     position: absolute;
-    left: 535px;
     top: 480px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: aliceblue;
