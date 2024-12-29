@@ -72,3 +72,35 @@
     font-size: 25px;
 }
 /*inGame.html style*/
+.inGame { 
+    height: 100%; 
+    margin: 0; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+}
+#answerElement {
+    position: fixed;
+    top: 345px;
+}
+#buttonGame {
+    position: fixed;
+    top: 405px;
+}
+#feedback {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:aliceblue;
+    position: fixed;
+    top: 375px;
+}
+#displayElement {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:aliceblue;
+    top: 20px;
+}
+#countryImage {
+    max-width: 300px;
+    position:fixed;
+    top: 120px;
+
+}
