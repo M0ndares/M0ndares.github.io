@@ -56,12 +56,12 @@
     border-style:dashed;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     text-align: center;
-    top: 85px;
+    top: 55px;
     font-size: 17px;
 }
 #rulesButton {
-    position: absolute;
-    top: 480px;
+    width: 200px;
+    top: 420px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: aliceblue;
     color:#2c215c;
@@ -69,6 +69,6 @@
     border-color: aliceblue;
     border-width: 10px;
     border-style: dotted; 
-    font-size: 40px;
+    font-size: 25px;
 }
 /*inGame.html style*/
