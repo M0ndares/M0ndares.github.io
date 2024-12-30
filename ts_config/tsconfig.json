@@ -24,7 +24,7 @@
     "node"
   ],
   "include": [
-    "src/**/*",
+    "src/**/*", "src/demoSpanish.js",
   ],
   "exclude": [
     "node_modules",

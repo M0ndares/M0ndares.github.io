@@ -13,11 +13,14 @@
         <img id="countryImage" src="../audio_and_video/japan.png" alt="Country Image">
         <button id="buttonGame" onclick="answerComparison()">Check my answer</button>
         <div id="feedback"></div>
-        <input id="answerElement" type="text" placeholder="Your Answer" required>
+        <input id="name" type="text" placeholder="Your Answer" required>
         <div id="time">00:00</div>
-        <div id = 'popUp' style="display: none;">
+        <div id="tryAgain" style="display: none;">
+            <button class="popUpItems" onclick="location.href='inGame.html'">Try again</button>
+        </div> 
+        <div id = 'gameFinished' style="display: none;">
             <h4 class="popUpItems">Insert a nickname to store your score</h4>
-            <input id="nicknameElement" class="popUpItems" type="text" placeholder="Nickname" required>
+            <input id="nickname" class="popUpItems" type="text" placeholder="Nickname" required>
             <button id="toCharts" class="popUpItems" onclick="location.href='bestScores.html'">Save my score</button> 
         </div>
     </div>

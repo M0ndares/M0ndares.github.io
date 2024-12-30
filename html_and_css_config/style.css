@@ -94,6 +94,10 @@
     justify-content: center; 
     align-items: center; 
 }
+#name {
+    position: fixed;
+    top: 335px;
+}
 #answerElement {
     position: fixed;
     top: 345px;
@@ -132,7 +136,35 @@
     position:fixed;
     top: 100px;
 }
-#popUp { 
+#gameFinished { 
+    position: fixed; 
+    left: 50%; 
+    top: 50%; 
+    transform: translate(-50%, -65%); 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 70px; 
+    width: auto; 
+    height: auto; 
+    overflow: auto; 
+}
+.popUpItems { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    flex-direction: column;
+    background-color: aliceblue; 
+    border: 1px solid #ddd; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8); 
+    padding: 20px; 
+    text-align: center; 
+    color: #2c215c; 
+    margin: 10px 0;
+    max-width: 300px;
+    width: 100%;
+  }
+  #tryAgain { 
     position: fixed; 
     left: 50%; 
     top: 50%; 
@@ -143,23 +175,6 @@
     height: auto; 
     overflow: auto; 
 }
-  .popUpItems { 
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-    font-family: Verdana, Geneva, Tahoma, sans-serif; 
-    flex-direction: column;
-    background-color: aliceblue; 
-    border: 1px solid #ddd; 
-    border-radius: 10px; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    padding: 20px; 
-    text-align: center; 
-    color: #2c215c; 
-    margin: 10px 0;
-    max-width: 300px;
-    width: 100%;
-  }
   #toCharts {
     display: flex;
     cursor: pointer;
@@ -170,8 +185,5 @@
     position:sticky;
     left: 7%;
  }
-  
-  
-  
 
 /*Charts style section*/
