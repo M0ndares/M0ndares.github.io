@@ -15,7 +15,11 @@
         <div id="feedback"></div>
         <input id="answerElement" type="text" placeholder="Your Answer" required>
         <div id="time">00:00</div>
-        <button id="toCharts" style="display: none;" onclick="goToCharts()">Save my score</button> 
+        <div id = 'popUp' style="display: none;">
+            <h4 class="popUpItems">Insert a nickname to store your score</h4>
+            <input id="answerElement" class="popUpItems" type="text" placeholder="Nickname" required>
+            <button id="toCharts" class="popUpItems" onclick="location.href='bestScores.html'">Save my score</button> 
+        </div>
     </div>
     <script src="../ts_config/src/demo.js"></script>
 </body>

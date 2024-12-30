@@ -4,11 +4,12 @@ var answers = ["Japan", "Mexico", "China", "Canada", "Argentina", "India", "Vene
 var images = ["../audio_and_video/mexico.png", "../audio_and_video/china.png", "../audio_and_video/canada.png", "../audio_and_video/argentina.png", "../audio_and_video/india.png", "../audio_and_video/venezuela.png", "../audio_and_video/uruguay.png", "../audio_and_video/greece.png", "../audio_and_video/puertoRico.png", "../audio_and_video/singapore.png", "../audio_and_video/honduras.png", "../audio_and_video/portugal.png", "../audio_and_video/norway.png", "../audio_and_video/elSalvador.png", "../audio_and_video/jamaica.png", "../audio_and_video/newZealand.png", "../audio_and_video/philippines.png", "../audio_and_video/ireland.png", "../audio_and_video/belize.png", "../audio_and_video/bangladesh.png", "../audio_and_video/denmark.png", "../audio_and_video/slovenia.png", "../audio_and_video/barbados.png", "../audio_and_video/finland.png", "../audio_and_video/mozambique.png", "../audio_and_video/iran.png", "../audio_and_video/morocco.png", "../audio_and_video/angola.png", "../audio_and_video/dominicanRepublic.png", "../audio_and_video/montenegro.png", "../audio_and_video/tunisia.png", "../audio_and_video/yemen.png", "../audio_and_video/albania.png", "../audio_and_video/latvia.png", "../audio_and_video/libya.png", "../audio_and_video/luxembourg.png", "../audio_and_video/moldova.png", "../audio_and_video/botswana.png", "../audio_and_video/algeria.png", "../audio_and_video/belarus.png", "../audio_and_video/estonia.png", "../audio_and_video/mongolia.png", "../audio_and_video/northMacedonia.png", "../audio_and_video/oman.png", "../audio_and_video/uzbekistan.png", "../audio_and_video/somalia.png", "../audio_and_video/rwanda.png", "../audio_and_video/turkmenistan.png", "../audio_and_video/seychelles.png"];
 var isCorrect = false;
 var onGame = true;
+var feedbackElement = document.getElementById('feedback'); 
+var popUp = document.getElementById('popUp');
 
 function answerComparison() { 
     var displayElement = document.getElementById('displayElement'); 
     var answerElement = document.getElementById('answerElement'); 
-    var feedbackElement = document.getElementById('feedback'); 
     var countryImage = document.getElementById('countryImage');
     if (answerElement && feedbackElement && onGame === true) { 
         if (answerElement.value.toLowerCase() === answers[round - 1].toLowerCase()) { 
@@ -22,6 +23,7 @@ function answerComparison() {
                 answerElement.value = "";
             } else { 
                 feedbackElement.innerText = "Congratulations! You've completed all rounds."; 
+                popUp.style.display = "block";
             } 
         } else { 
             feedbackElement.innerText = "Wrong answer, try again!";
@@ -33,7 +35,6 @@ function answerComparison() {
 var timer = 10;
 var countdownInterval;
 function countdown() {
-    var toChartsButton = document.getElementById('toCharts');
     var countdownElement = document.getElementById('timeDisplay');
     if (countdownElement && round<50) {
         countdownElement.innerText = timer;
@@ -42,7 +43,8 @@ function countdown() {
             clearInterval(countdownInterval);
             countdownElement.innerText = "Time's up!";
             onGame = false;
-            toChartsButton.style.display = "block";
+            feedbackElement.innerText = `The correct answer was ${answers[round-1]}`
+            popUp.style.display = "block";
         } 
         if (isCorrect === true) {
             timer = 10;

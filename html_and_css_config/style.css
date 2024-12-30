@@ -24,6 +24,9 @@
     color: aliceblue;
 }
 #startButton {
+    cursor: pointer;
+    padding: 10px 20px;
+    margin: 15px;
     width: 200px;
     top: 420px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -35,6 +38,16 @@
     border-style: dotted; 
     font-size: 25px;
 }
+.languageButton {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: aliceblue;
+    gap: 130px;
+    margin: -25px;
+    display: flex; 
+    justify-content: center; 
+    align-items: center;  
+}
+
 /*gameRules.html style*/
 #rulesTitle {
     font-size: 50px;
@@ -60,6 +73,7 @@
     font-size: 17px;
 }
 #rulesButton {
+    cursor: pointer;
     width: 200px;
     top: 420px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -71,6 +85,7 @@
     border-style: dotted; 
     font-size: 25px;
 }
+
 /*inGame.html style*/
 .inGame { 
     height: 100%; 
@@ -86,6 +101,7 @@
 #buttonGame {
     position: fixed;
     top: 405px;
+    cursor: pointer;
 }
 #feedback {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -116,3 +132,26 @@
     position:fixed;
     top: 100px;
 }
+.popUpItems {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px; 
+    padding: 20px;
+    background-color: aliceblue;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+#toCharts { 
+    margin-top: 130px; 
+}
+
+/*Charts style section*/
