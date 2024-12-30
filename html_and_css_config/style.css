@@ -96,11 +96,23 @@
 #displayElement {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color:aliceblue;
-    top: 20px;
+    position: fixed;
+    top: 10px;
+}
+#timeDisplay {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:aliceblue;
+    position: fixed;
+    top: 50px;
+}
+#time {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color:aliceblue;
+    position: fixed;
+    top: 450px;
 }
 #countryImage {
     max-width: 300px;
     position:fixed;
-    top: 120px;
-
+    top: 100px;
 }
