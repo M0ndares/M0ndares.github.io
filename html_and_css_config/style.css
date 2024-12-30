@@ -134,10 +134,9 @@
 }
 #popUp { 
     position: fixed; 
-    z-index: 4; 
     left: 50%; 
-    top: 30%; 
-    transform: translate(-50%, -0%); 
+    top: 50%; 
+    transform: translate(-50%, -50%); 
     background-color: rgba(0, 0, 0, 0.8); 
     padding: 20px; 
     width: auto; 
@@ -158,7 +157,7 @@
     text-align: center; 
     color: #2c215c; 
     margin: 10px 0;
-    max-width: 150px;
+    max-width: 200px;
     width: 100%;
   }
   #toCharts {
