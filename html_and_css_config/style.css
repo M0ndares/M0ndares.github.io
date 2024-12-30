@@ -137,8 +137,8 @@
     left: 50%; 
     top: 50%; 
     transform: translate(-50%, -50%); 
-    background-color: rgba(0, 0, 0, 0.8); 
-    padding: 20px; 
+    background-color: rgba(0, 0, 0, 0.6); 
+    padding: 70px; 
     width: auto; 
     height: auto; 
     overflow: auto; 
