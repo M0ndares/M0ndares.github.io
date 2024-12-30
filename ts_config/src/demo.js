@@ -90,7 +90,6 @@ function bestScores() {
     var name = document.getElementById('nickname');
     var score = document.getElementById('round');
     var time = document.getElementById('time'); 
-    if (name && score && time && ongame===false) {
-        
+    if (name && score && time && onGame===false) {
     }
 }
