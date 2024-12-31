@@ -24,6 +24,7 @@ function answerComparison() {
             } else { 
                 feedbackElement.innerText = "Congratulations! You've completed all rounds."; 
                 gameFinished.style.display = "block";
+                onGame = false;
             } 
         } else { 
             feedbackElement.innerText = "Wrong answer, try again!";
@@ -88,8 +89,10 @@ function goToCharts() {
 // Displays a chart with the best scores
 function bestScores() {
     var name = document.getElementById('nickname');
-    var score = document.getElementById('round');
+    var currentDate =new Date();
+    var dateElement = document.getElementById('date');
     var time = document.getElementById('time'); 
-    if (name && score && time && onGame===false) {
+    if (name && date && time && onGame===false) {
+        dateElement.innerText = currentDate.toLocaleDateString();
     }
 }

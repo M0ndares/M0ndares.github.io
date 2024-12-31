@@ -5,7 +5,7 @@ var images = ["../audio_and_video/mexico.png", "../audio_and_video/china.png", "
 var isCorrect = false;
 var onGame = true;
 var feedbackElement = document.getElementById('feedback'); 
-var popUp = document.getElementById('popUp');
+var gameFinished = document.getElementById('gameFinished');
 
 function answerComparison() { 
     var displayElement = document.getElementById('displayElement'); 
@@ -13,7 +13,7 @@ function answerComparison() {
     var countryImage = document.getElementById('countryImage');
     if (answerElement && feedbackElement && onGame === true) { 
         if (answerElement.value.toLowerCase() === answers[round - 1].toLowerCase()) { 
-            displayElement.innerText = `Respuestas correctas: ${round}`;
+            displayElement.innerText = `Rondas completadas: ${round}`;
             feedbackElement.innerText = "¡Correcto!"; 
             isCorrect = true;
             countryImage.src = images[round-1];
@@ -22,11 +22,12 @@ function answerComparison() {
             if (round <= answers.length) { 
                 answerElement.value = "";
             } else { 
-                feedbackElement.innerText = "Felicidades has completado todas las rondas"; 
-                popUp.style.display = "block";
+                feedbackElement.innerText = "¡Felicidades! Has completado todas las rondas."; 
+                gameFinished.style.display = "block";
+                onGame = false;
             } 
         } else { 
-            feedbackElement.innerText = "¡Respuesta incorrecta, intenta de nuevo!";
+            feedbackElement.innerText = "Wrong answer, try again!";
         }
     }
 }
@@ -35,6 +36,7 @@ function answerComparison() {
 var timer = 10;
 var countdownInterval;
 var tryAgain = document.getElementById('tryAgain');
+
 function countdown() {
     var countdownElement = document.getElementById('timeDisplay');
     if (countdownElement && round<50) {
@@ -44,8 +46,8 @@ function countdown() {
             clearInterval(countdownInterval);
             countdownElement.innerText = "¡El tiempo se acabó!";
             onGame = false;
-            feedbackElement.innerText = `La respuesta correcta era ${answers[round-1]}`;
             tryAgain.style.display = "block";
+            feedbackElement.innerText = `La respuesta correcta era ${answers[round-1]}`
         } 
         if (isCorrect === true) {
             timer = 10;
@@ -86,10 +88,11 @@ function goToCharts() {
 
 // Displays a chart with the best scores
 function bestScores() {
-    var name = document.getElementById('name');
-    var score = document.getElementById('round');
+    var name = document.getElementById('nickname');
+    var currentDate =new Date();
+    var dateElement = document.getElementById('date');
     var time = document.getElementById('time'); 
-    if (name && score && time && ongame===false) {
-        create
+    if (name && date && time && onGame===false) {
+        dateElement.innerText = currentDate.toLocaleDateString();
     }
 }

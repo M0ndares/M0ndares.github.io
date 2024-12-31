@@ -183,3 +183,26 @@
  }
 
 /*Charts style section*/
+#categories {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    background-color: aliceblue;
+    color:#2c215c;
+    margin-left: auto; 
+    margin-right: auto;
+}
+#chart {
+    width: 500px; 
+    margin-left: auto; 
+    margin-right: auto; 
+}
+.scores {
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    border: 1px solid aliceblue; /* This applies a border to the row */
+    color: aliceblue;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.scores td {
+    border: 1px solid aliceblue;
+}
