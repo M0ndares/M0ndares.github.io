@@ -1,0 +1,25 @@
+.container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+.mttClass {
+    margin-top: 10%;
+    margin-bottom: -10%;
+    color: black;
+    position: relative;
+    background-color: #68d162;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+#buttonConvert {
+    width: 300px;
+    color: black;
+    position: relative;
+    background-color: white;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTT</title>
+    <link rel="stylesheet" href="mtt.css">
+</head>
+<body style="background-color:  #68d162;">
+    <h4 class = "container">A project by Osval Montesinos</h4>
+    <img  class = "mttClass" src = "../MTT/mtt.png">
+    <h1 class = "container" style="font-style: oblique;">Morse To Text</h1>
+    <div class = "container">
+        <input type="text" id="textToMorseCode" placeholder="Your text" required>
+        <form>
+            <input type="radio" class="radioMorse" id="textOption" name="option">
+            <label for="textOption">Introduce Text</label><br><br>
+            <input type="radio" class="radioMorse" id="morseOption" name="option">
+            <label for="morseOption">Introduce Morse</label><br>
+        </form>
+    </div>
+    <br>
+    <button onclick = "isChecked()" id = "buttonConvert">Convert</button>
+    <br>
+    <label class = "container" id="labelForMorse"></label>
+    <script src="../MTT/mtt.js"></script>
+</body>
+</html>
