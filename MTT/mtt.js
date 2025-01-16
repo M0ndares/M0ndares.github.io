@@ -5,7 +5,7 @@ var morseOption = document.getElementById('morseOption');
 
 function isChecked() {
     if (textOption.checked) {
-      if(text.value.charAt(0) === '_' || text.value.charAt(0) === '.') {
+      if(text.value.charAt(0) === '-' || text.value.charAt(0) === '.') {
       label.innerText = 'The given sentence does not contanin any text';
       return;
       }
@@ -61,7 +61,7 @@ function isChecked() {
         }
         encryption();
     } else if (morseOption.checked) {
-      if(morseOption.checked && (text.value.charAt(0) !== '_' || text.value.charAt(0) !== '.')) {
+      if(morseOption.checked && (text.value.charAt(0) !== '-' || text.value.charAt(0) !== '.')) {
         label.innerText = 'The given sentence does not contanin any morse code';  
         return;
       }
