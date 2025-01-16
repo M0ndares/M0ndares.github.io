@@ -4,11 +4,12 @@
     text-align: center;
     font-family: Tahoma, Geneva, Verdana, sans-serif;
 }
-#mttClass {
+#mttImage {
+    max-width: 290px;
     color: black;
     position:relative;
     background-color: #68d162;
-    top: 120px;
+    top: 110px;
     left: 50%; 
     transform: translate(-50%, -50%);
 }
