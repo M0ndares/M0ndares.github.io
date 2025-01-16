@@ -1,0 +1,40 @@
+#explanation {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color:antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-style: oblique;
+}
+.year {
+    display: flex;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    align-items: center;
+    justify-content: center;
+    height: 100%; 
+    padding: 0px 300px;
+    color:antiquewhite;
+}
+#GTF {
+    position: relative;
+    background-color: #2c215c;
+    cursor: pointer;
+    top:auto;
+    left: 50%; 
+    top: 50%;
+    height: auto; 
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+#MTT {
+    color: black;
+    position: relative;
+    background-color: #68d162;
+    cursor: pointer;
+    top:auto;
+    left: 50%; 
+    top: 50%;
+    height: auto; 
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
