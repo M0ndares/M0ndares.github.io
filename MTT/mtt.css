@@ -8,11 +8,9 @@
     color: black;
     position:relative;
     background-color: #68d162;
+    top: 120px;
     left: 50%; 
-    top: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 10%;
-    margin-bottom: -12%;
 }
 #buttonConvert {
     width: 300px;
