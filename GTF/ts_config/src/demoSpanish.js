@@ -27,7 +27,7 @@ function answerComparison() {
                 onGame = false;
             } 
         } else { 
-            feedbackElement.innerText = "Wrong answer, try again!";
+            feedbackElement.innerText = "¡Respuesta incorrecta, intenta de nuevo!";
         }
     }
 }
