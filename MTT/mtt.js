@@ -54,7 +54,7 @@ function isChecked() {
                 const currentChar = text.charAt(i).toUpperCase();
                 if (currentChar in letterToMorseCode) {
                     result += letterToMorseCode[currentChar] + '/';
-                } else {
+                } else if (text.charAt(i+1) !== ' ') {
                     result += '/';
                 }
             }
