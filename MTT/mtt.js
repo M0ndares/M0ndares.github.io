@@ -61,7 +61,7 @@ function isChecked() {
         }
         encryption();
     } else if (morseOption.checked) {
-      if(morseOption.checked && (text.value.charAt(0) !== '-' || text.value.charAt(0) !== '.')) {
+      if(text.value.charAt(0) !== '-' && text.value.charAt(0) !== '.') {
         label.innerText = 'The given sentence does not contanin any morse code';  
         return;
       }
