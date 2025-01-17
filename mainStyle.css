@@ -1,10 +1,16 @@
 #explanation {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     color:antiquewhite;
+    font-style: oblique;
+    text-decoration: overline;
+}
+.yearText {
     display: flex;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     align-items: center;
     justify-content: center;
-    font-style: oblique;
+    text-decoration: underline;
+    color:antiquewhite;
 }
 .year {
     display: flex;
@@ -14,6 +20,7 @@
     height: 100%; 
     padding: 0px 300px;
     color:antiquewhite;
+    border-style: dotted;
 }
 #GTF {
     position: relative;
@@ -30,6 +37,18 @@
     color: black;
     position: relative;
     background-color: #68d162;
+    cursor: pointer;
+    top:auto;
+    left: 50%; 
+    top: 50%;
+    height: auto; 
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+}
+#GDS {
+    color:aliceblue;
+    position: relative;
+    background-color: #de6b1f;
     cursor: pointer;
     top:auto;
     left: 50%; 
