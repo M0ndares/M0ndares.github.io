@@ -1,8 +1,4 @@
 class Interpolation {
-    x1Value;
-    y1Value;
-    x2Value;
-    y2Value;
     constructor(x1Value, y1Value, x2Value, y2Value) {
         this.x1Value = x1Value;
         this.y1Value = y1Value;
@@ -15,26 +11,21 @@ class Interpolation {
     }
 
     calculateY(givenX) {
-        return (((this.calculateM() *  (givenX - this.x1Value)) + this.y1Value));
+        return ((this.calculateM() * (givenX - this.x1Value)) + this.y1Value);
     }
 }
 
-class DeterminationAndCorrelation {
-    xPoints;
-    yPoints;
-
-    constructor(xPoints, yPoints) {
-        this.xPoints = xPoints;
-        this.yPoints = yPoints;
+function calculateInterpolation() {
+    let xArray = document.getElementById("xArrayLineal").value.split(';').map(Number);
+    let yArray = document.getElementById("yArrayLineal").value.split(';').map(Number);
+    let givenX = parseFloat(document.getElementById("givenXForLineal").value);
+    
+    if (xArray.length !== 2 || yArray.length !== 2) {
+        alert("Por favor, ingrese exactamente dos valores para X y Y.");
+        return;
     }
 
-    sumatoryX() {
-        const sumatoryX = this.xPoints.map((currentX) => {
-            
-        })
-    }
+    let interpolation = new Interpolation(xArray[0], yArray[0], xArray[1], yArray[1]); 
+    let result = interpolation.calculateY(givenX);
+    document.getElementById("resultForLineal").innerText = "El valor interpolado es: " + result;
 }
-
-const example = new Interpolation (500, 35, 2500, 15);
-console.log(example.calculateM());
-console.log(example.calculateY(800));

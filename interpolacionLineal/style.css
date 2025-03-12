@@ -23,6 +23,15 @@ footer {
     margin: auto;      
     height: 15vh;         
   }
+
+  .containerForLineal {
+    display: flex;        
+    justify-content: center; 
+    align-items: center;            
+    margin: auto;      
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;      
+  }
 .buttons {
     background-color: #407362;
     min-width: 200px;
