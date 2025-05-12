@@ -1,0 +1,212 @@
+name: Autograding Tests
+on:
+  - push
+
+permissions:
+  checks: write
+  actions: write
+  contents: write
+jobs:
+  Ejecucion-de-Pruebas:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    outputs:
+      prueba-de-getDiscount-score: ${{ steps.set-env-vars.outputs.PRUEBA_DE_GETDISCOUNT_SCORE_RESULT }}
+      prueba-de-getAmount-score: ${{ steps.set-env-vars.outputs.PRUEBA_DE_getAmoUNT_SCORE_RESULT }}
+      prueba-de-isInRange-score: ${{ steps.set-env-vars.outputs.PRUEBA_DE_ISINRANGE_SCORE_RESULT }}
+      prueba-de-getShippingCost-score: ${{ steps.set-env-vars.outputs.PRUEBA_DE_GETSHIPPINGCOST_SCORE_RESULT }}
+      prueba-de-calculateTax-score: ${{ steps.set-env-vars.outputs.PRUEBA_DE_CALCULATETAX_SCORE_RESULT }}
+      final-score: ${{ steps.set-env-vars.outputs.FINAL_SCORE }}
+    steps:
+      - name: Preparación de las pruebas
+        uses: actions/checkout@v4
+
+      - name: Prueba de getDiscount
+        id: prueba-de-getDiscount
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Prueba de getDiscount
+          setup-command: npm i
+          command: npm test getDiscount
+          timeout: 10
+          max-score: 20
+
+      - name: Prueba de getAmount
+        id: prueba-de-getAmount
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Prueba de getAmount
+          setup-command: npm i
+          command: npm test getAmount
+          timeout: 10
+          max-score: 20
+
+      - name: Prueba de isInRange
+        id: prueba-de-isInRange
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Prueba de isInRange
+          setup-command: npm i
+          command: npm test isInRange
+          timeout: 10
+          max-score: 20
+
+      - name: Prueba de getShippingCost
+        id: prueba-de-getShippingCost
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Prueba de getShippingCost
+          setup-command: npm i
+          command: npm test getShippingCost
+          timeout: 10
+          max-score: 20
+
+      - name: Prueba de calculateTax
+        id: prueba-de-calculateTax
+        uses: classroom-resources/autograding-command-grader@v1
+        with:
+          test-name: Prueba de calculateTax
+          setup-command: npm i
+          command: npm test calculateTax
+          timeout: 10
+          max-score: 20
+
+      - name: Preparación de resultados
+        id: set-env-vars
+        run: |
+          # Decode and set score for Prueba de getDiscount
+          PRUEBA_DE_GETDISCOUNT_RESULTS=$(echo "${{ steps.prueba-de-getDiscount.outputs.result }}" | base64 --decode)
+          PRUEBA_DE_GETDISCOUNT_SCORE=$(echo "$PRUEBA_DE_GETDISCOUNT_RESULTS" | jq '.tests[0].score')
+          PRUEBA_DE_GETDISCOUNT_MAX_SCORE=$(echo "$PRUEBA_DE_GETDISCOUNT_RESULTS" | jq '.max_score')
+          PRUEBA_DE_GETDISCOUNT_SCORE_RESULT="${PRUEBA_DE_GETDISCOUNT_SCORE}/${PRUEBA_DE_GETDISCOUNT_MAX_SCORE}"
+          echo "PRUEBA_DE_GETDISCOUNT_SCORE_RESULT=$PRUEBA_DE_GETDISCOUNT_SCORE_RESULT" >> "$GITHUB_OUTPUT"
+
+          # Decode and set score for Prueba de getAmount
+          PRUEBA_DE_getAmoUNT_RESULTS=$(echo "${{ steps.prueba-de-getAmount.outputs.result }}" | base64 --decode)
+          PRUEBA_DE_getAmoUNT_SCORE=$(echo "$PRUEBA_DE_getAmoUNT_RESULTS" | jq '.tests[0].score')
+          PRUEBA_DE_getAmoUNT_MAX_SCORE=$(echo "$PRUEBA_DE_getAmoUNT_RESULTS" | jq '.max_score')
+          PRUEBA_DE_getAmoUNT_SCORE_RESULT="${PRUEBA_DE_getAmoUNT_SCORE}/${PRUEBA_DE_getAmoUNT_MAX_SCORE}"
+          echo "PRUEBA_DE_getAmoUNT_SCORE_RESULT=$PRUEBA_DE_getAmoUNT_SCORE_RESULT" >> "$GITHUB_OUTPUT"
+
+          # Decode and set score for Prueba de isInRange
+          PRUEBA_DE_ISINRANGE_RESULTS=$(echo "${{ steps.prueba-de-isInRange.outputs.result }}" | base64 --decode)
+          PRUEBA_DE_ISINRANGE_SCORE=$(echo "$PRUEBA_DE_ISINRANGE_RESULTS" | jq '.tests[0].score')
+          PRUEBA_DE_ISINRANGE_MAX_SCORE=$(echo "$PRUEBA_DE_ISINRANGE_RESULTS" | jq '.max_score')
+          PRUEBA_DE_ISINRANGE_SCORE_RESULT="${PRUEBA_DE_ISINRANGE_SCORE}/${PRUEBA_DE_ISINRANGE_MAX_SCORE}"
+          echo "PRUEBA_DE_ISINRANGE_SCORE_RESULT=$PRUEBA_DE_ISINRANGE_SCORE_RESULT" >> "$GITHUB_OUTPUT"
+
+          # Decode and set score for Prueba de getShippingCost
+          PRUEBA_DE_GETSHIPPINGCOST_RESULTS=$(echo "${{ steps.prueba-de-getShippingCost.outputs.result }}" | base64 --decode)
+          PRUEBA_DE_GETSHIPPINGCOST_SCORE=$(echo "$PRUEBA_DE_GETSHIPPINGCOST_RESULTS" | jq '.tests[0].score')
+          PRUEBA_DE_GETSHIPPINGCOST_MAX_SCORE=$(echo "$PRUEBA_DE_GETSHIPPINGCOST_RESULTS" | jq '.max_score')
+          PRUEBA_DE_GETSHIPPINGCOST_SCORE_RESULT="${PRUEBA_DE_GETSHIPPINGCOST_SCORE}/${PRUEBA_DE_GETSHIPPINGCOST_MAX_SCORE}"
+          echo "PRUEBA_DE_GETSHIPPINGCOST_SCORE_RESULT=$PRUEBA_DE_GETSHIPPINGCOST_SCORE_RESULT" >> "$GITHUB_OUTPUT"
+
+          # Decode and set score for Prueba de calculateTax
+          PRUEBA_DE_CALCULATETAX_RESULTS=$(echo "${{ steps.prueba-de-calculateTax.outputs.result }}" | base64 --decode)
+          PRUEBA_DE_CALCULATETAX_SCORE=$(echo "$PRUEBA_DE_CALCULATETAX_RESULTS" | jq '.tests[0].score')
+          PRUEBA_DE_CALCULATETAX_MAX_SCORE=$(echo "$PRUEBA_DE_CALCULATETAX_RESULTS" | jq '.max_score')
+          PRUEBA_DE_CALCULATETAX_SCORE_RESULT="${PRUEBA_DE_CALCULATETAX_SCORE}/${PRUEBA_DE_CALCULATETAX_MAX_SCORE}"
+          echo "PRUEBA_DE_CALCULATETAX_SCORE_RESULT=$PRUEBA_DE_CALCULATETAX_SCORE_RESULT" >> "$GITHUB_OUTPUT"
+
+          # Calculate total score
+          TOTAL_SCORE=$(echo "$PRUEBA_DE_GETDISCOUNT_SCORE + $PRUEBA_DE_getAmoUNT_SCORE + $PRUEBA_DE_ISINRANGE_SCORE + $PRUEBA_DE_GETSHIPPINGCOST_SCORE + $PRUEBA_DE_CALCULATETAX_SCORE" | bc)
+          MAX_SCORE=$(echo "$PRUEBA_DE_GETDISCOUNT_MAX_SCORE + $PRUEBA_DE_getAmoUNT_MAX_SCORE + $PRUEBA_DE_ISINRANGE_MAX_SCORE + $PRUEBA_DE_GETSHIPPINGCOST_MAX_SCORE + $PRUEBA_DE_CALCULATETAX_MAX_SCORE" | bc)
+          FINAL_SCORE="${TOTAL_SCORE}/${MAX_SCORE}"
+          echo "FINAL_SCORE=$FINAL_SCORE" >> "$GITHUB_OUTPUT"
+
+      - name: Reporte de resultados
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          PRUEBA-DE-GETDISCOUNT_RESULTS: "${{steps.prueba-de-getDiscount.outputs.result}}"
+          PRUEBA-DE-getAmoUNT_RESULTS: "${{steps.prueba-de-getAmount.outputs.result}}"
+          PRUEBA-DE-ISINRANGE_RESULTS: "${{steps.prueba-de-isInRange.outputs.result}}"
+          PRUEBA-DE-GETSHIPPINGCOST_RESULTS: "${{steps.prueba-de-getShippingCost.outputs.result}}"
+          PRUEBA-DE-CALCULATETAX_RESULTS: "${{steps.prueba-de-calculateTax.outputs.result}}"
+        with:
+          runners: prueba-de-getDiscount,prueba-de-getAmount,prueba-de-isInRange,prueba-de-getShippingCost,prueba-de-calculateTax
+
+  # job to build custom status badges
+  build-badges:
+    name: Publicación de insignias
+    runs-on: ubuntu-latest
+    if: always()
+    needs: Ejecucion-de-Pruebas
+    steps:
+      # need to checkout whole repo
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      # switch to badges branch
+      - name: Preparando rama para publicación de resultados
+        run: git checkout badges 2>/dev/null || git checkout -b badges
+
+      # make dir for badges
+      - name: Creación directorio para insignias
+        run: mkdir -p .github/badges
+
+      # create points bar for Final Score
+      - name: Creación insignia para calificación final
+        uses: markpatterson27/points-bar@v1
+        with:
+          points: ${{ needs.Ejecucion-de-Pruebas.outputs.final-score }}
+          path: ".github/badges/points-label0.svg"
+          type: "badge"
+          label: "Total"
+          bar-color: "#11BBCC"
+          bar-background: "#88BBCC"
+
+      # create points bar for Prueba de getDiscount
+      - name: Creación insignia para Prueba de getDiscount
+        uses: markpatterson27/points-bar@v1
+        with:
+          points: ${{ needs.Ejecucion-de-Pruebas.outputs.prueba-de-getDiscount-score }}
+          path: ".github/badges/points-label1.svg"
+          type: "badge"
+          label: "Puntos"
+
+      # create points bar for Prueba de getAmount
+      - name: Creación insignia para Prueba de getAmount
+        uses: markpatterson27/points-bar@v1
+        with:
+          points: ${{ needs.Ejecucion-de-Pruebas.outputs.prueba-de-getAmount-score }}
+          path: ".github/badges/points-label2.svg"
+          type: "badge"
+          label: "Puntos"
+
+      # create points bar for Prueba de isInRange
+      - name: Creación insignia para Prueba de isInRange
+        uses: markpatterson27/points-bar@v1
+        with:
+          points: ${{ needs.Ejecucion-de-Pruebas.outputs.prueba-de-isInRange-score }}
+          path: ".github/badges/points-label3.svg"
+          type: "badge"
+          label: "Puntos"
+
+      # create points bar for Prueba de getShippingCost
+      - name: Creación insignia para Prueba de getShippingCost
+        uses: markpatterson27/points-bar@v1
+        with:
+          points: ${{ needs.Ejecucion-de-Pruebas.outputs.prueba-de-getShippingCost-score }}
+          path: ".github/badges/points-label4.svg"
+          type: "badge"
+          label: "Puntos"
+
+      # create points bar for Prueba de calculateTax
+      - name: Creación insignia para Prueba de calculateTax
+        uses: markpatterson27/points-bar@v1
+        with:
+          points: ${{ needs.Ejecucion-de-Pruebas.outputs.prueba-de-calculateTax-score }}
+          path: ".github/badges/points-label5.svg"
+          type: "badge"
+          label: "Puntos"
+
+      # commit badges to branch
+      - name: Publicación de insignias
+        run: |
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .github/badges/*.svg
+          git commit -m "Publicación de resultados" || echo "sin cambios para publicar"
+          git push origin badges

@@ -1,0 +1,54 @@
+{
+  "tests": [
+    {
+      "name": "Prueba de getDiscount",
+      "setup": "npm i",
+      "run": "npm test getDiscount",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Prueba de getAmount",
+      "setup": "npm i",
+      "run": "npm test getAmount",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Prueba de isInRange",
+      "setup": "npm i",
+      "run": "npm test isInRange",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Prueba de getShippingCost",
+      "setup": "npm i",
+      "run": "npm test getShippingCost",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Prueba de calculateTax",
+      "setup": "npm i",
+      "run": "npm test calculateTax",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    }
+  ]
+}

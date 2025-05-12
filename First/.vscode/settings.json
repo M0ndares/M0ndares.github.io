@@ -1,0 +1,11 @@
+{
+  "git.ignoreLimitWarning": true,
+  "jest.jestCommandLine": "jest",
+  "editor.tabSize": 2,
+  "editor.useTabStops": false,
+  "workbench.colorCustomizations": {
+    "activityBar.background": "#0F350C",
+    "titleBar.activeBackground": "#154A10",
+    "titleBar.activeForeground": "#F3FCF3"
+  }
+}

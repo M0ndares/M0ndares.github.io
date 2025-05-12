@@ -1,0 +1,70 @@
+name: Autograding Tests
+'on':
+- push
+- repository_dispatch
+permissions:
+  checks: write
+  actions: read
+  contents: read
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+    - name: Prueba de getDiscount
+      id: prueba-de-getdiscount
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Prueba de getDiscount
+        setup-command: npm i
+        command: npm test getDiscount
+        timeout: 10
+        max-score: 20
+    - name: Prueba de getAmount
+      id: prueba-de-getamount
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Prueba de getAmount
+        setup-command: ''
+        command: npm test getAmount
+        timeout: 10
+        max-score: 20
+    - name: Prueba de isInRange
+      id: prueba-de-isinrange
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Prueba de isInRange
+        setup-command: ''
+        command: npm test isInRange
+        timeout: 10
+        max-score: 20
+    - name: Prueba de getShippingCost
+      id: prueba-de-getshippingcost
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Prueba de getShippingCost
+        setup-command: ''
+        command: npm test getShippingCost
+        timeout: 10
+        max-score: 20
+    - name: Prueba de calculateTax
+      id: prueba-de-calculatetax
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: Prueba de calculateTax
+        setup-command: ''
+        command: npm test calculateTax
+        timeout: 10
+        max-score: 20
+    - name: Autograding Reporter
+      uses: classroom-resources/autograding-grading-reporter@v1
+      env:
+        PRUEBA-DE-GETDISCOUNT_RESULTS: "${{steps.prueba-de-getdiscount.outputs.result}}"
+        PRUEBA-DE-GETAMOUNT_RESULTS: "${{steps.prueba-de-getamount.outputs.result}}"
+        PRUEBA-DE-ISINRANGE_RESULTS: "${{steps.prueba-de-isinrange.outputs.result}}"
+        PRUEBA-DE-GETSHIPPINGCOST_RESULTS: "${{steps.prueba-de-getshippingcost.outputs.result}}"
+        PRUEBA-DE-CALCULATETAX_RESULTS: "${{steps.prueba-de-calculatetax.outputs.result}}"
+      with:
+        runners: prueba-de-getdiscount,prueba-de-getamount,prueba-de-isinrange,prueba-de-getshippingcost,prueba-de-calculatetax
