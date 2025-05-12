@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tropikol - Descubre el paraíso de Colima con experiencias únicas de viaje.">
+  <title>tropikol</title>
+  <link rel="stylesheet" href="../main.css">
+</head>
+<body>
+  <header>
+    <img src="../content/logoInverso.png">
+    <p>A un clic de Colima</p>
+  </header>
+
+ <nav>
+  <a href="../main.html">Inicio</a>
+  <div class="dropdown-container">
+    <button id="expButton" onclick="toggleMenu()"><strong>Experiencias</strong></button>
+  </div>
+  <a href="../indexes/destinations.html">Destinos</a>
+  <a href="../indexes/iniciarSesion.html">Iniciar Sesión</a>
+  <a href="../indexes/registro.html">Registro</a>
+  </nav>
+
+<!-- Menú fuera del nav -->
+  <div id="menu" class="card">
+    <a href="../indexes/naturaleza.html" style="text-decoration: none; color: inherit;">Naturaleza</a><hr>
+    <a href="../indexes/cultura.html" style="text-decoration: none; color: inherit;">Cultura</a><hr>
+    <a href="../indexes/deportes.html" style="text-decoration: none; color: inherit;">Deportes</a><hr>
+    <a href="../indexes/eventos.html" style="text-decoration: none; color: inherit;">Eventos</a><hr>
+    <a href="../indexes/personalizado.html" style="text-decoration: none; color: inherit;">Personalizado</a>
+  </div>
+    <!-- INICIAR SESIÓN -->
+  <section id="login" class="hero">
+    <h2>Iniciar Sesión</h2>
+    <form>
+      <label>Correo:</label><input type="email" required><br>
+      <label>Contraseña:</label><input type="password" required><br>
+      <input type="checkbox"> Recordarme<br>
+      <button>Entrar</button><br>
+      <a href="#">¿Olvidaste tu contraseña?</a>
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Tropikol - Agencia de Viajes en Colima</p>
+    <p>Contacto: contacto@tropikol.com | Tel: 312-123-4567</p>
+    <div>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+  <script src="../main.js"></script>
+</body>
