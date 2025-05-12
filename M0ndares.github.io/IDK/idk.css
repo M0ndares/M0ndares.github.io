@@ -1,0 +1,14 @@
+.containerText {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.containerInput {
+    position: relative;
+    background-color: white;
+    left: 50%; 
+    top: 50%;
+    transform: translate(-50%, -50%);
+}

@@ -1,0 +1,45 @@
+header {
+    background-color: #407362;
+    min-height: 40px;
+}
+footer {
+    background-color: #407362;
+    margin-top: 0%;
+    min-height: 80px;
+}
+#logo {
+    max-width: 290px;
+    color: black;
+    position:relative;
+    background-color: #68d162;
+    top: 130px;
+    left: 50%; 
+    transform: translate(-50%, -50%);
+}
+.container {
+    display: flex;        
+    justify-content: center; 
+    align-items: center;            
+    margin: auto;      
+    height: 15vh;         
+  }
+
+  .containerForLineal {
+    display: flex;        
+    justify-content: center; 
+    align-items: center;            
+    margin: auto;      
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;      
+  }
+.buttons {
+    background-color: #407362;
+    min-width: 200px;
+    color:white;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;   
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 5px; 
+}

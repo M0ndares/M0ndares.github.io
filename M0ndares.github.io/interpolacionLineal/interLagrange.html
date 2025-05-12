@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interpolación de Lagrange - Polinomio</title>
+</head>
+<body>
+
+    <h1>Calcular la fórmula del polinomio usando interpolación de Lagrange</h1>
+
+    <label for="xArray">Valores de X (separados por punto y coma):</label>
+    <input type="text" id="xArray" placeholder="Ej. 1; 3; 5" />
+
+    <label for="yArray">Valores de Y (separados por punto y coma):</label>
+    <input type="text" id="yArray" placeholder="Ej. 2; 6; 10" />
+
+    <button onclick="calculateInterpolation()">Calcular Fórmula del Polinomio</button>
+
+    <label id="resultLabel"></label>
+
+    <script src="interLagrange.js"></script>
+</body>
+</html>
