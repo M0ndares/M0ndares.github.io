@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Tropikol - Descubre el paraíso de Colima con experiencias únicas de viaje.">
+  <title>tropikol</title>
+  <link rel="stylesheet" href="main.css">
+</head>
+<body>
+  <header>
+    <img src="content/logoInverso.png">
+    <p>A un clic de Colima</p>
+  </header>
+
+   <nav>
+  <a href="main.html">Inicio</a>
+  <div class="dropdown-container">
+    <button id="expButton" onclick="toggleMenu()"><strong>Experiencias</strong></button>
+  </div>
+  <a href="indexes/destinations.html">Destinos</a>
+  <a href="indexes/iniciarSesion.html">Iniciar Sesión</a>
+  <a href="indexes/registro.html">Registro</a>
+  </nav>
+
+<!-- Menú fuera del nav -->
+  <div id="menu" class="card">
+    <a href="indexes/naturaleza.html" style="text-decoration: none; color: inherit;">Naturaleza</a><hr>
+    <a href="indexes/cultura.html" style="text-decoration: none; color: inherit;">Cultura</a><hr>
+    <a href="indexes/deportes.html" style="text-decoration: none; color: inherit;">Deportes</a><hr>
+    <a href="indexes/eventos.html" style="text-decoration: none; color: inherit;">Eventos</a><hr>
+    <a href="indexes/personalizado.html" style="text-decoration: none; color: inherit;">Personalizado</a>
+  </div>
+
+  <main>
+    <!-- INICIO -->
+    <section id="inicio">
+      <div class="hero">
+        <div class="cta">
+          <p><strong>Nos complace invitarte a tu próxima aventura, estamos comprometidos con brindarte un servicio excepcional y acompañarte en cada paso de tu viaje, asegurándonos de que vivas la esencia y el encanto de Colima de la mejor manera posible. ¡Tu próxima aventura comienza con nosotros!</strong></p>
+        </div>
+    </section>
+
+    <!-- EXPERIENCIAS -->
+    <section id="experiencias">
+      <h2>Experiencias</h2>
+      <p>Elige entre nuestras categorías de viaje y crea recuerdos únicos.</p>
+      <br>
+      <div class="grid">
+        <button class="buttonsGrid" onclick="window.location.href='indexes/naturaleza.html'"><strong>Naturaleza</strong></button>
+        <button class="buttonsGrid" onclick="window.location.href='indexes/cultura.html'"><strong>Cultura</strong></button>
+        <button class="buttonsGrid" onclick="window.location.href='indexes/deportes.html'"><strong>Deportes</strong></button>
+        <button class="buttonsGrid" onclick="window.location.href='indexes/eventos.html'"><strong>Eventos</strong></button>
+        <button class="buttonsGrid" onclick="window.location.href='indexes/personalizado.html'"><strong>Personalizado</strong></button>
+      </div>
+      <div class="grid">
+        <div class="card">
+          <img class="images" src="content/natruraleza.jpg">
+          <p>Senderismo, aves, volcanes y más.</p>
+        </div>
+        <div class="card">
+           <img class="images" src="content/cultura.jpeg">
+          <p>Tradiciones, historia y pueblos mágicos.</p>
+        </div>
+        <div class="card">
+           <img class="images" src="content/deportes.jpg">
+          <p>Surf, ciclismo, rafting y aventura extrema.</p>
+        </div>
+        <div class="card">
+           <img class="images" src="content/eventos.jpg">
+          <p>Festividades y ferias inolvidables.</p>
+        </div>
+        <div class="card">
+           <img class="images" src="content/personalizado.jpg">
+          <p>Crea tu propio tour con nosotros.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESTINOS DESTACADOS -->
+    <section id="destinosDestacados">
+     </div>
+      <h2>Destinos Destacados de la Temporada 2025</h2>
+      <br>
+      <div class="grid">
+        <div class="card"><h3>1. La audiencia, Manzanillo.</h3><br><img src="content/playa-la-audiencia.jpg" class="images"></img></div>
+        <div class="card"><h3>2. Feria del Ponche, Comala.</h3><br><img src="content/feria-del-ponche-pan-2023.jpg" class="images"></img></div>
+        <div class="card"><h3>3. Volcán de Colima, Cuauhtémoc</h3><br><img src="content/volcan-nevado-de-colima-national-park.jpg" class="images"></img></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tropikol - Agencia de Viajes en Colima</p>
+    <p>Contacto: contacto@tropikol.com | Tel: 312-123-4567</p>
+    <div>
+      <a href="#">Facebook</a> |
+      <a href="#">Instagram</a> |
+      <a href="#">WhatsApp</a>
+    </div>
+  </footer>
+  <script src="main.js"></script>
+</body>
+</html>
