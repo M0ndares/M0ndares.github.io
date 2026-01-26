@@ -48,23 +48,31 @@
         </button>
     </div>
     <style>
-        a {
-            display:none;
-        }
+    h2, h5, p { 
+        color: white;
+    }
 
-        .btn:hover img {
-            display: none;
-        }
+    a { 
+        display: none; 
+    }
+    
+    .btn:hover img { 
+        display: none; 
+    }
 
-        .btn:hover a {
-            transition: 1s;
-            display: flex;            
-            flex-direction: column;   
-            justify-content: center;  
-            align-items: center;      
-            color: white;
-            text-align: center;        
-        }
-    </style>
+    .btn:hover a {
+        animation: transition 2s; 
+        display: flex;            
+        flex-direction: column;   
+        justify-content: center;  
+        align-items: center;      
+        text-align: center;       
+    }
+
+    @keyframes transition {
+        from { opacity: 0; } /* Empieza invisible */
+        to { opacity: 1; }   /* Termina visible */
+    }
+</style>
 </body>
 </html>
