@@ -1,0 +1,41 @@
+ h2, p { 
+    color: white;
+}
+
+a { 
+    display: none; 
+    text-decoration: none;
+}
+    
+.btn:hover img { 
+    display: none; 
+}
+
+.btn:hover a {
+    animation: transition 2s; 
+    display: flex;            
+    flex-direction: column;   
+    justify-content: center;  
+    align-items: center;      
+    text-align: center;       
+}
+
+@keyframes transition {
+    from { opacity: 0; } 
+    to { opacity: 1; }  
+}
+
+.btn {
+    min-height: 10rem; 
+    min-width: 100%;
+}
+
+img {
+    max-height: 7rem; 
+    max-width: 13rem;
+}
+
+body {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background-color: black;
+}
