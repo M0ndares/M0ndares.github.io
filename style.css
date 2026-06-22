@@ -1,41 +1,56 @@
- h2, p { 
-    color: white;
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color:lightgrey;
 }
 
-a { 
-    display: none; 
+.project-logo {
+    max-width: 100%;    
+    height: auto;       
+    max-height: 100px;  
+    object-fit: contain;
+    display: block;
+    margin-bottom: 15px; 
+}
+
+.project-card {
+    border-radius: 12px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.gtf { background-color: #2c215c; color: #ffffff; }
+.mtt { background-color: #68d162; color: #000000; }
+.tropikol { background-color: #1f44a3; color: #000000; }
+.waste-it { background-color: #ff751f; color: #ffffff; }
+.dactimex { background-color: #ff00b8; color: #ffffff; }
+.ixora { background-color: #f6ecd9; color: #b63c47; }
+
+.card-actions {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+.btn-demo, .btn-code {
+    padding: 8px 16px;
+    border-radius: 6px;
     text-decoration: none;
-}
-    
-.btn:hover img { 
-    display: none; 
-}
-
-.btn:hover a {
-    animation: transition 2s; 
-    display: flex;            
-    flex-direction: column;   
-    justify-content: center;  
-    align-items: center;      
-    text-align: center;       
+    font-weight: bold;
+    font-size: 0.9rem;
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: inherit;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    transition: background 0.2s;
 }
 
-@keyframes transition {
-    from { opacity: 0; } 
-    to { opacity: 1; }  
-}
-
-.btn {
-    min-height: 10rem; 
-    min-width: 100%;
-}
-
-img {
-    max-height: 7rem; 
-    max-width: 13rem;
-}
-
-body {
-    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    background-color: black;
+.btn-demo:hover, .btn-code:hover {
+    background-color: rgba(255, 255, 255, 0.4);
 }
