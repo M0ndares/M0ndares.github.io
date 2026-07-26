@@ -5,161 +5,226 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>m0ndares | Portfolio</title>
     <link rel="icon" type="image/jpg" href="m0ndares.png">
-    <!-- Importamos fuentes modernas y elegantes -->
+    
+    <!-- Fuentes originales -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
-    <link href="style.css" rel="stylesheet">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'Segoe UI', 'Tahoma', 'Geneva', 'Verdana', 'sans-serif'],
+                    },
+                    colors: {
+                        'brand-dark': '#0d0f14',
+                        'gtf': '#2c215c',
+                        'mtt': '#68d162',
+                        'tropikol': '#1f44a3',
+                        'wasteit': '#ff751f',
+                        'dactimex': '#ff00b8',
+                        'ixora': '#f6ecd9',
+                        'futbot': '#014740',
+                        'spatula': '#2a1212',
+                        'ixora-red': '#b63c47',
+                        'spatula-red': '#C62828',
+                    },
+                    boxShadow: {
+                        'gtf-glow': '0 10px 25px rgba(44, 33, 92, 0.5)',
+                        'mtt-glow': '0 10px 25px rgba(104, 209, 98, 0.5)',
+                        'tropikol-glow': '0 10px 25px rgba(31, 68, 163, 0.5)',
+                        'wasteit-glow': '0 10px 25px rgba(255, 117, 31, 0.5)',
+                        'dactimex-glow': '0 10px 25px rgba(255, 0, 184, 0.5)',
+                        'ixora-glow': '0 10px 25px rgba(182, 60, 71, 0.5)',
+                        'futbot-glow': '0 10px 25px rgba(1, 71, 64, 0.5)',
+                        'spatula-glow': '0 10px 25px rgba(198, 40, 40, 0.5)',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Patrón de fondo original */
+        body {
+            background-image: 
+                linear-gradient(rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+            background-size: 30px 30px;
+        }
+        /* Degradado de texto animable */
+        .brand-title {
+            background: linear-gradient(135deg, #ffffff 20%, #a5b4fc 45%, #a5b4fc 55%, #ffffff 80%);
+            background-size: 250% auto;
+            background-position: 0% center;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            transition: background-position 0.5s ease;
+        }
+        .group:hover .brand-title {
+            background-position: 100% center;
+        }
+    </style>
 </head>
-<body>
+<body class="bg-brand-dark text-[#f1f5f9] font-sans min-h-screen pb-[60px] box-border m-0 p-0">
 
-    <header class="portfolio-header">
+    <!-- Header -->
+    <header class="max-w-[1200px] mx-auto px-4 pt-10 pb-5 sm:py-[60px] sm:pb-10 text-center">
         <div class="header-content">
             <div class="header-socials">
-                <a href="https://github.com/M0ndares" target="_blank" class="social-link">
-                    <h1 class="brand-title">m0ndares</h1>
+                <a href="https://github.com/M0ndares" target="_blank" class="group inline-block px-[22px] py-2 bg-[#1e293b] text-[#e2e8f0] no-underline rounded-[20px] text-[0.9rem] font-semibold border border-[#334155] transition-colors duration-1000 hover:bg-[#2e3e50] hover:border-[#475569]">
+                    <h1 class="brand-title text-[clamp(2rem,8vw,3.5rem)] font-extrabold tracking-[-1px] mb-2 leading-none">m0ndares</h1>
                 </a>
             </div>
         </div>
     </header>
 
-    <main class="portfolio-container">
+    <!-- Main Container -->
+    <main class="max-w-[1240px] mx-auto grid grid-cols-[repeat(auto-fit,minmax(250px,1fr))] gap-4 sm:gap-[20px] px-3 sm:px-[16px]">
 
-        <div class="project-card spatula">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/spatula.png" alt="Logo de Spatula" class="project-logo">
+        <!-- Proyecto 1: Spatula -->
+        <div class="group/card bg-spatula text-spatula-red rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-spatula-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/spatula.png" alt="Logo de Spatula" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="project-info">
-                    <h2>Spatula</h2>
-                    <span class="project-date">July 2026</span>
-                    <p class="project-tech">React, Next.js, Postgres, Drizzle, Groq</p>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">Spatula</h2>
+                    <span class="text-[0.75rem] opacity-65 font-light">July 2026</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 opacity-85">React, Next.js, Postgres, Drizzle, Groq</p>
                 </div>
             </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://spatula-taupe.vercel.app/" class="btn-demo">Webpage</a>
-                <a target="_blank" href="https://github.com/M0ndares/spatula" class="btn-code">Repository</a>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://spatula-taupe.vercel.app/" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Webpage</a>
+                <a target="_blank" href="https://github.com/M0ndares/spatula" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Repository</a>
             </div>
         </div>
 
-        <!-- Proyecto 2: Futbot (Junio 2026) -->
-        <div class="project-card futbot">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/copa.png" alt="Logo de Futbot" class="project-logo">
+        <!-- Proyecto 2: Futbot -->
+        <div class="group/card bg-futbot text-white rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-futbot-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/copa.png" alt="Logo de Futbot" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="project-info">
-                    <h2>Copa Futbot 2026</h2>
-                    <span class="project-date">June 2026</span>
-                    <p class="project-tech">Supervision, Ultralytics, OpenCV, Trackers</p>
-                </div>
-            </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://github.com/M0ndares/futbot" class="btn-code">Repository</a>
-            </div>
-        </div>
-
-        <div class="project-card ixora">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/ixora.png" alt="Logo de Ixora" class="project-logo">
-                </div>
-                <div class="project-info">
-                    <h2>Ixora</h2>
-                    <span class="project-date">April 2026</span>
-                    <p class="project-tech">SQL, Express, HTML</p>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">Copa Futbot 2026</h2>
+                    <span class="text-[0.75rem] opacity-65 font-light">June 2026</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 opacity-85">Supervision, Ultralytics, OpenCV, Trackers</p>
                 </div>
             </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://m0ndares.github.io/ixora/front/3/menu.html" style="color: #b63c47" class="btn-demo">Webpage</a>
-                <a target="_blank" href="https://github.com/M0ndares/ixora" style="color: #b63c47" class="btn-code">Repository</a>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://github.com/M0ndares/futbot" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Repository</a>
             </div>
         </div>
 
-        <div class="project-card dactimex">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/dactiMex.png" alt="Logo de DactiMex" class="project-logo">
+        <!-- Proyecto 3: Ixora -->
+        <div class="group/card bg-ixora text-ixora-red rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-ixora-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/ixora.png" alt="Logo de Ixora" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="project-info">
-                    <h2>DactiMex</h2>
-                    <span class="project-date">February 2026</span>
-                    <p class="project-tech">Mediapipe, Tensorflow, OpenCV, Flask </p>
-                </div>
-            </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://m0ndares.github.io/dactilologiaMexicana/html.html" class="btn-demo">Webpage</a>
-                <a target="_blank" href="https://github.com/M0ndares/dactilologiaMexicana" class="btn-code">Repository</a>
-            </div>
-        </div>
-
-        <div class="project-card waste-it">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/wasteIt.png" alt="Logo de WasteIt" class="project-logo">
-                </div>
-                <div class="project-info">
-                    <h2>WasteIt</h2>
-                    <span class="project-date">January 2026</span>
-                    <p class="project-tech">Tensorflow, OpenCV, Flask</p>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">Ixora</h2>
+                    <span class="text-[0.75rem] opacity-65 font-light">April 2026</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 opacity-85">SQL, Express, HTML</p>
                 </div>
             </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://m0ndares.github.io/WasteIt/src/html.html" class="btn-demo">Webpage</a>
-                <a target="_blank" href="https://github.com/M0ndares/WasteIt" class="btn-code">Repository</a>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://m0ndares.github.io/ixora/front/3/menu.html" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-ixora-red border-white/15 hover:bg-white/20 hover:border-white/35">Webpage</a>
+                <a target="_blank" href="https://github.com/M0ndares/ixora" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-ixora-red border-white/15 hover:bg-white/20 hover:border-white/35">Repository</a>
             </div>
         </div>
 
-        <!-- Proyecto 6: Tropikol (Septiembre 2025) -->
-        <div class="project-card tropikol">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/tropikol.png" alt="Logo de Tropikol" class="project-logo">
+        <!-- Proyecto 4: DactiMex -->
+        <div class="group/card bg-dactimex text-black rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-dactimex-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/dactiMex.png" alt="Logo de DactiMex" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="project-info">
-                    <h2>Tropikol</h2>
-                    <span class="project-date">October 2025</span>
-                    <p class="project-tech">Axure RP</p>
-                </div>
-            </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://wnzpi3.axshare.com" class="btn-demo">Prototype</a>
-                <a target="_blank" href="https://github.com/M0ndares/tropikol" class="btn-code">Repository</a>
-            </div>
-        </div>
-
-        <!-- Proyecto 7: MTT (Mayo 2025) -->
-        <div class="project-card mtt dark-text">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/mtt.png" alt="Logo de MTT" class="project-logo">
-                </div>
-                <div class="project-info">
-                    <h2>Morse To Text</h2>
-                    <span class="project-date">April 2025</span>
-                    <p class="project-tech">JavaScript</p>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">DactiMex</h2>
+                    <span class="text-[0.75rem] text-black opacity-100 font-light">February 2026</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 text-black opacity-100">Mediapipe, Tensorflow, OpenCV, Flask</p>
                 </div>
             </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://m0ndares.github.io/mtt/src/mtt.html" class="btn-demo">Webpage</a>
-                <a target="_blank" href="https://github.com/m0ndares/mtt" class=" btn-code">Repository</a>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://m0ndares.github.io/dactilologiaMexicana/html.html" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Webpage</a>
+                <a target="_blank" href="https://github.com/M0ndares/dactilologiaMexicana" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Repository</a>
             </div>
         </div>
 
-        <div class="project-card gtf">
-            <div class="card-main">
-                <div class="logo-wrapper">
-                    <img src="logos/gtf.png" alt="Logo de GTF" class="project-logo">
+        <!-- Proyecto 5: WasteIt -->
+        <div class="group/card bg-wasteit text-white rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-wasteit-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/wasteIt.png" alt="Logo de WasteIt" class="max-w-full max-h-full object-contain">
                 </div>
-                <div class="project-info">
-                    <h2>Guess The Flag</h2>
-                    <span class="project-date">November 2024</span>
-                    <p class="project-tech">JavaScript</p>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">WasteIt</h2>
+                    <span class="text-[0.75rem] opacity-65 font-light">January 2026</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 opacity-85">Tensorflow, OpenCV, Flask</p>
                 </div>
             </div>
-            <div class="card-actions">
-                <a target="_blank" href="https://m0ndares.github.io/gtf/html_and_css_config/index.html" class="btn-demo">Webpage</a>
-                <a target="_blank" href="https://github.com/m0ndares/gtf" class="btn-code">Repository</a>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://m0ndares.github.io/WasteIt/src/html.html" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Webpage</a>
+                <a target="_blank" href="https://github.com/M0ndares/WasteIt" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Repository</a>
+            </div>
+        </div>
+
+        <!-- Proyecto 6: Tropikol -->
+        <div class="group/card bg-tropikol text-white rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-tropikol-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/tropikol.png" alt="Logo de Tropikol" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">Tropikol</h2>
+                    <span class="text-[0.75rem] opacity-65 font-light">October 2025</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 opacity-85">Axure RP</p>
+                </div>
+            </div>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://wnzpi3.axshare.com" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Prototype</a>
+                <a target="_blank" href="https://github.com/M0ndares/tropikol" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Repository</a>
+            </div>
+        </div>
+
+        <!-- Proyecto 7: MTT -->
+        <div class="group/card bg-mtt text-[#1a202c] rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-mtt-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/mtt.png" alt="Logo de MTT" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">Morse To Text</h2>
+                    <span class="text-[0.75rem] opacity-65 font-light">April 2025</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 opacity-85 text-black">JavaScript</p>
+                </div>
+            </div>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://m0ndares.github.io/mtt/src/mtt.html" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 bg-black/5 text-inherit border border-black/12 hover:bg-black/10 hover:border-black/25">Webpage</a>
+                <a target="_blank" href="https://github.com/m0ndares/mtt" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 bg-black/5 text-inherit border border-black/12 hover:bg-black/10 hover:border-black/25">Repository</a>
+            </div>
+        </div>
+
+        <!-- Proyecto 8: GTF -->
+        <div class="group/card bg-gtf text-white rounded-[20px] p-4 sm:p-[24px_20px] flex flex-col justify-between items-center text-center min-h-0 sm:min-h-[310px] border border-white/5 transition-all duration-300 ease-[cubic-bezier(0.25,0.8,0.25,1)] hover:-translate-y-1.5 hover:shadow-gtf-glow">
+            <div class="flex flex-col items-center gap-4 w-full">
+                <div class="w-[100px] h-[100px] sm:w-[115px] sm:h-[115px] bg-transparent rounded-none flex items-center justify-center p-0 transition-transform duration-300 group-hover/card:scale-[1.12]">
+                    <img src="logos/gtf.png" alt="Logo de GTF" class="max-w-full max-h-full object-contain">
+                </div>
+                <div class="flex flex-col gap-[2px]">
+                    <h2 class="text-[1.25rem] font-semibold tracking-[-0.3px]">Guess The Flag</h2>
+                    <span class="text-[0.75rem] opacity-65 font-light">November 2024</span>
+                    <p class="text-[0.8rem] font-semibold mt-1.5 opacity-85">JavaScript</p>
+                </div>
+            </div>
+            <div class="mt-[20px] flex flex-col sm:flex-row flex-wrap gap-2 sm:gap-[10px] w-full">
+                <a target="_blank" href="https://m0ndares.github.io/gtf/html_and_css_config/index.html" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Webpage</a>
+                <a target="_blank" href="https://github.com/m0ndares/gtf" class="w-full sm:w-auto sm:flex-1 text-center py-[11px] sm:py-[10px] px-[14px] rounded-[12px] no-underline font-semibold text-[0.85rem] inline-block transition-all duration-200 border bg-white/[0.08] text-white border-white/15 hover:bg-white/20 hover:border-white/35">Repository</a>
             </div>
         </div>
 
